@@ -15,6 +15,8 @@ class CreateLikesxPhotosTable extends Migration
     {
         Schema::create('likesx_photos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id');
+            $table->integer('post_id');
             $table->timestamps();
         });
     }
